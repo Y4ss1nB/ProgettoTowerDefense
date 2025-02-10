@@ -24,7 +24,7 @@ Il progetto deve permettere ad un utente di poter giocare ad un gioco che sia co
 - L’utente non potrà posizionare le torri sul sentiero e ci dovrà essere una certa distanza tra le torri.
 - Se il gioco finisce l'utente ha ancora almeno una vita lì verrà stampata la scritta “Hai vinto”.
 
-##REQUISITI NON FUNZIONALI:
+## REQUISITI NON FUNZIONALI:
 - Il sistema deve essere di facile utilizzo 
 - il sistema deve riuscire a girare anche su dispositivi poco performanti.
 - il sistema deve riuscire ad essere veloce nella visualizzazione grafica sullo schermo per non mostrare i frame in maniera lenta e in modo che non ci siano lag
