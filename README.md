@@ -9,7 +9,7 @@ Il progetto deve permettere ad un utente di poter giocare ad un gioco che sia co
  Il sistema dovrà avere tre tipi di torri che corrispondono a tre forme e a tre colori di cui variera aspetto, potenza e tempo di attesa per poter sparare al nemico. L'utente le avrà a disposizione tutte e tre:
     - Il primo tipo di torre è la torre di forma quadrata e di colore rosso e sarà la torre più debole.
     - Il secondo tipo di torre è la torre di colore verde e di forma triangolare e può essere definita come torre di media potenza dato che è un via di mezzo tra la torre più forte e quella più debole.
-    - Il terzo tipo di torre è la torre di colore blu e di forma rotonda e sarà la torre più potente.
+    -- Il terzo tipo di torre è la torre di colore blu e di forma rotonda e sarà la torre più potente.
 - Il sistema avrà tre tipi di nemici tutti e tre a forma di rombo di cui andrà a variare il colore, la vita e la velocità, più il nemico ha velocità maggiore e più la sua salute sarà minore. Ci sarà un tipo di nemico diverso per ogni ondata di passaggio dei nemici sul sentiero:
 - il primo tipo di nemico è il nemico di colore arancione e sarà quello con velocità e salute più equilibrata.
 - il secondo tipo di nemico è il nemico di colore viola e sarà con più vita ma più lento.
