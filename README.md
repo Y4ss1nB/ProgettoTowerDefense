@@ -29,3 +29,11 @@ Il progetto deve permettere ad un utente di poter giocare ad un gioco che sia co
 - il sistema deve riuscire a girare anche su dispositivi poco performanti.
 - il sistema deve riuscire ad essere veloce nella visualizzazione grafica sullo schermo per non mostrare i frame in maniera lenta e in modo che non ci siano lag
 - il sistema non deve avere un peso eccessivo.
+## SCELTE PROGETTUALI
+Per lo sviluppo di un sistema informatico che permetta di giocare a Tower Defense in maniera più semplice rispetto al solito e in 2D sono state identificate le seguenti componenti:
+- Una componente è quella che va a gestire la torre, quindi questa componente dovrà contenere le informazioni di una specifica torre e la sua logica, per tanto nel sistema informatico ne sarà presente una per ogni torre inserita nel gioco.
+- Per le torri oltre alla componente che contiene i dati della torre ci sarà una componente più specifica per ogni torre che andrà ad indicare il come va disegnata ed il colore di tale torre.
+- Una componente è quella che va a gestire il nemico, quindi questa componente dovrà contenere le informazioni specifiche per ogni nemico e la sua logica, infatti come per le torri ce ne sarà uno per ogni nemico.
+- Per i nemici oltre alla componente che contiene i dati del nemico ci sarà una componente più specifica per ogni nemico che andrà ad indicare il colore di tale nemico
+- La componente principale è quella che va a contenere l'insieme delle torri e l’insieme dei nemici e permette di creare  un’ interazione tra i 2, ovvero contienela logica che permette di andare a far funzionare il gioco nella maniera corretta riuscendo ad unire la logica delle torri e la logica dei nemici andando a creare effettivamente il gioco. 
+- La componente principale contiene a sua volta una componente che permette di usare il mouse per inserire le torri e una componente che comprende gli input da tastiera per scegliere la torre da inserire.
