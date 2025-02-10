@@ -4,7 +4,6 @@ Boubagura Yassin
 Il progetto deve permettere ad un utente di poter giocare ad un gioco che sia come Tower Defense ma in 2D e semplificato a livello visivo; l’utente avrà il compito di posizionare delle torri nello spazio per fare in modo che i nemici non arrivino alla fine del sentiero, in caso contrario andrà a perdere vite e quando le andrà a finire perderà il gioco; quindi ci saranno dei nemici che cammineranno lungo un percorso e l’utente dovrà ucciderli mediante l’uso delle torri. Le torri saranno di più tipologie e in base alla torre ci sarà una potenza di attacco diversa e un tempo di attesa per attaccare il nemico diverso. Anche i nemici saranno di più tipologie in base all’ondata varieranno i nemici.
 ## REQUISITI FUNZIONALI:
 
-
 - il sistema deve permettere di giocare ad un tower defense semplificato graficamente rispetto alla versione originale.
  Il sistema dovrà avere tre tipi di torri che corrispondono a tre forme e a tre colori di cui variera aspetto, potenza e tempo di attesa per poter sparare al nemico. L'utente le avrà a disposizione tutte e tre:
     - Il primo tipo di torre è la torre di forma quadrata e di colore rosso e sarà la torre più debole.
@@ -25,3 +24,8 @@ Il progetto deve permettere ad un utente di poter giocare ad un gioco che sia co
 - L’utente non potrà posizionare le torri sul sentiero e ci dovrà essere una certa distanza tra le torri.
 - Se il gioco finisce l'utente ha ancora almeno una vita lì verrà stampata la scritta “Hai vinto”.
 
+##REQUISITI NON FUNZIONALI:
+- Il sistema deve essere di facile utilizzo 
+- il sistema deve riuscire a girare anche su dispositivi poco performanti.
+- il sistema deve riuscire ad essere veloce nella visualizzazione grafica sullo schermo per non mostrare i frame in maniera lenta e in modo che non ci siano lag
+- il sistema non deve avere un peso eccessivo.
