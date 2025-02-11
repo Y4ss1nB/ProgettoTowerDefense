@@ -40,4 +40,10 @@ public abstract class Nemico {
     public void setVita(float vita) {
         this.vita = vita;
     }
+
+    public void dannoNemico(float danno){
+        vita = vita - danno;
+    }
+
+    
 }
