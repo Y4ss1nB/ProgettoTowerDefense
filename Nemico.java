@@ -12,5 +12,19 @@ public abstract class Nemico {
         this.velocita = velocita;
         this.vita = vita;
     }
+
+    //getter
+    public float getX() {
+        return this.x;
+    }
+    public float getY() {
+        return this.y;
+    }
+    public float getVelocita() {
+        return this.velocita;
+    }
+    public float getVita() {
+        return this.vita;
+    }
     
 }
