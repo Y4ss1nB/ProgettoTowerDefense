@@ -27,4 +27,17 @@ public abstract class Nemico {
         return this.vita;
     }
     
+    //setter
+    public void setX(float x) {
+        this.x = x;
+    }
+    public void setY(float y) {
+        this.y = y;
+    }
+    public void setVelocita(float velocita) {
+        this.velocita = velocita;
+    }
+    public void setVita(float vita) {
+        this.vita = vita;
+    }
 }
