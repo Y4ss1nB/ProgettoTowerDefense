@@ -45,5 +45,11 @@ public abstract class Nemico {
         vita = vita - danno;
     }
 
-    
+    boolean isNemicoMorto(){
+        if (this.getVita() <= 0) {
+            return true;
+        }
+        return false;
+    }
+
 }
