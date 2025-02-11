@@ -4,7 +4,7 @@ public class NemicoViola extends Nemico{
         super(x, y, velocita, vita);
     }
 
-    void mostra() {
+    void display() {
         fill(128, 0, 128);
         beginShape();
         vertex(x, y - 10);
