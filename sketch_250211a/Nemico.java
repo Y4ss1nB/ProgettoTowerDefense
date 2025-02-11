@@ -52,4 +52,6 @@ public abstract class Nemico {
         return false;
     }
 
+    public abstract void display();
+
 }
