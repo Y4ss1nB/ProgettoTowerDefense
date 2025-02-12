@@ -1,4 +1,4 @@
-public abstract class Torre {
+abstract class Torre {
 
     //attributi
     protected float x;

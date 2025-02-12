@@ -1,4 +1,4 @@
-public abstract class Nemico {
+abstract class Nemico {
     //attributi
     protected float x;
     protected float y;
