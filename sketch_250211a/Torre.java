@@ -32,7 +32,22 @@ abstract class Torre {
     return this.tempoAttesaPerSparare;
   }
 
-  
+  //setter
+  public void setX(float x) {
+    this.x = x;
+  }
+  public void setY(float y) {
+    this.y = y;
+  }
+  public void setRaggioAzioneSparo(int raggioAzioneSparo) {
+    this.raggioAzioneSparo = raggioAzioneSparo;
+  }
+  public void setTempoRicaricaSparo(float tempoRicaricaSparo) {
+    this.tempoRicaricaSparo = tempoRicaricaSparo;
+  }
+  public void setTempoAttesaPerSparare(int tempoAttesaPerSparare) {
+    this.tempoAttesaPerSparare = tempoAttesaPerSparare;
+  }
 
 
     
