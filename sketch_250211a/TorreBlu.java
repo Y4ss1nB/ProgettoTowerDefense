@@ -3,4 +3,9 @@ class TorreBlu extends Torre{
         super(x, y, raggioAzioneSparo, tempoRicaricaSparo, tempoAttesaPerSparare, potenzaColpo);
     }
 
+    public void display(){
+        fill(0, 0, 255);
+        ellipse(x, y, 20, 20);
+    }
+
 }
