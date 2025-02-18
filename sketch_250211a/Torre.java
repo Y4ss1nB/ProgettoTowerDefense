@@ -60,7 +60,7 @@ abstract class Torre {
   }
 
   //metodo per cercare i nemici che hanno x o y comune alla torre e spararli
-  public void cercaNemicoNellArea(ArrayList<Nemico> nemici){
+  public void AttacaNemicoNellArea(ArrayList<Nemico> nemici){
     tempoAttesaPerSparare--;
     if (this.getTempoAttesaPerSparare() <= 0) {
       for (Nemico nemico : nemici) {
