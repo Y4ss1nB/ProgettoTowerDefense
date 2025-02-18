@@ -9,20 +9,24 @@ Il progetto deve permettere ad un utente di poter giocare ad un gioco che sia co
     - Il primo tipo di torre è la torre di forma quadrata e di colore rosso e sarà la torre più debole.
     - Il secondo tipo di torre è la torre di colore verde e di forma triangolare e può essere definita come torre di media potenza dato che è un via di mezzo tra la torre più forte e quella più debole.
     - Il terzo tipo di torre è la torre di colore blu e di forma rotonda e sarà la torre più potente.
-- Il sistema avrà tre tipi di nemici tutti e tre a forma di rombo di cui andrà a variare il colore, la vita e la velocità, più il nemico ha velocità maggiore e più la sua salute sarà minore. Ci sarà un tipo di nemico diverso per ogni ondata di passaggio dei nemici sul sentiero:
+- Il sistema avrà tre tipi di nemici tutti e tre a forma di rombo di cui andrà a variare il colore, la vita, la velocità e il il numero di monte che valgono; più il nemico ha velocità maggiore e più la sua salute sarà minore. Ci sarà un tipo di nemico diverso per ogni ondata di passaggio dei nemici sul sentiero:
     - il primo tipo di nemico è il nemico di colore arancione e sarà quello con velocità e salute più equilibrata.
     - il secondo tipo di nemico è il nemico di colore viola e sarà con più vita ma più lento.
     - il terzo tipo di nemico è il nemico di colore nero e sarà il nemico con più salute ma sarà anche quello più lento.
+- Il tipo di nemico presente nell'ondata sarà totalmente randomico.
 - All’apertura del gioco dovrà essere spiegato come si gioca, l'obiettivo del gioco e come si perde.
 - L’utente avrà tre vite.
 - Se l'utente permette a più di tre nemici di arrivare alla fine del sentiero avrà perso e lì verrà stampata la scritta “game over”.
 - L’utente avrà a disposizione una quantità di torri infinita.
+- La torre si potranno acquistare con le monete
+- Le monete si guadagnano uccidendo i nemici
+- ogni nemico ha un valore differente in base alla sua vita, ovvero maggiore è la vita del nemico maggiore è il numero di monete che vale.
 - Per selezionare la torre da inserire nel gioco l’utente potrà usare i numeri sulla tastiera:
     - il tasto uno indica la torre rossa.
     - il tasto due indica la torre verde.
     - il tasto tre indica la torre blu.
 - L’utente non potrà posizionare le torri sul sentiero e ci dovrà essere una certa distanza tra le torri.
-- Se il gioco finisce l'utente ha ancora almeno una vita lì verrà stampata la scritta “Hai vinto”.
+- L'obbiettivo del giocatore è battere più ondate possibili.
 
 ## REQUISITI NON FUNZIONALI:
 - Il sistema deve essere di facile utilizzo 
