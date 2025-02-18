@@ -9,4 +9,14 @@ class GestioneTowerDefense {
     int vite;
     int monete;
     Random rand;
+
+    //costruttore
+    public GestioneTowerDefense(){
+        this.torri = new ArrayList<Torre>();
+        this.nemici = new ArrayList<Nemico>();
+        this.numeroOndata = 0;
+        this.vite = 3;
+        this.monete = 220;
+        this.rand = new Random();
+    }
 }
