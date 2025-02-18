@@ -19,6 +19,7 @@ Il progetto deve permettere ad un utente di poter giocare ad un gioco che sia co
 - Se l'utente permette a più di tre nemici di arrivare alla fine del sentiero avrà perso e lì verrà stampata la scritta “game over”.
 - L’utente avrà a disposizione una quantità di torri infinita.
 - La torre si potranno acquistare con le monete
+- All'inizio del gioco verrano date 225 monete
 - Le monete si guadagnano uccidendo i nemici
 - ogni nemico ha un valore differente in base alla sua vita, ovvero maggiore è la vita del nemico maggiore è il numero di monete che vale.
 - Per selezionare la torre da inserire nel gioco l’utente potrà usare i numeri sulla tastiera:
