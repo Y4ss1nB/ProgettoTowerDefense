@@ -64,7 +64,7 @@ abstract class Torre {
     tempoAttesaPerSparare--;
     if (this.getTempoAttesaPerSparare() <= 0) {
       for (Nemico nemico : nemici) {
-        if (this.getX() == nemico.getX() || this.getY() == nemico.getY()) {
+        if (this.getX() == nemico.getX() || this.getY() == nemico.getY()) { // se il nemico è su stessa x o y la torre gli spara
           this.spara(nemico);
           tempoAttesaPerSparare = tempoRicaricaSparo;
           break;
@@ -78,6 +78,6 @@ abstract class Torre {
     nemico.dannoNemico(potenzaColpo);
   }
 
-
+  public abstract void display();
     
 }
