@@ -4,13 +4,15 @@ abstract class Nemico {
     protected float y;
     protected float velocita;
     protected float vita;
+    protected int valoreNemico;
 
     //costruttore
-    public Nemico(float x, float y, float velocita, float vita){
+    public Nemico(float x, float y, float velocita, float vita, valoreNemico){
         this.x = x;
         this.y = y;
         this.velocita = velocita;
         this.vita = vita;
+        this.valoreNemico = valoreNemico
     }
 
     //getter
@@ -26,6 +28,9 @@ abstract class Nemico {
     public float getVita() {
         return this.vita;
     }
+    public int getValoreNemico() {
+        return this.valoreNemico;
+    }
     
     //setter
     public void setX(float x) {
@@ -40,17 +45,25 @@ abstract class Nemico {
     public void setVita(float vita) {
         this.vita = vita;
     }
+    public int setValoreNemico(int valoreNemico) {
+        this.valoreNemico = valoreNemico;
+    }
 
     public void dannoNemico(float danno){
         vita = vita - danno;
     }
 
-    boolean isNemicoMorto(){
+    public boolean isNemicoMorto(){
         if (this.getVita() <= 0) {
             return true;
         }
         return false;
     }
+
+    public boolean hasNemicoRaggiuntoFine(){
+        return (x > width);
+    }
+
 
     public abstract void display();
 
