@@ -19,4 +19,23 @@ class GestioneTowerDefense {
         this.monete = 220;
         this.rand = new Random();
     }
+
+    //getter
+    public ArrayList<Torre> getTorri() {
+        return this.torri;
+    }
+    public ArrayList<Nemico> getNemici() {
+        return this.nemici;
+    }
+    public int getNumeroOndata() {
+        return this.numeroOndata;
+    }
+    public int getVite() {
+        return this.vite;
+    }
+    public int getMonete() {
+        return this.monete;
+    }
+    
+
 }
