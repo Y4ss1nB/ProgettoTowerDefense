@@ -36,6 +36,17 @@ class GestioneTowerDefense {
     public int getMonete() {
         return this.monete;
     }
+
+    //setter
+    public void setNumeroOndata(int numeroOndata) {
+        this.numeroOndata = numeroOndata;
+    }
+    public void setVite(int vite) {
+        this.vite = vite;
+    }
+    public void setMonete(int monete) {
+        this.monete = monete;
+    }
     
 
 }
