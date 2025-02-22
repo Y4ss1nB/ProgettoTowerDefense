@@ -74,6 +74,27 @@ class GestioneTowerDefense {
         text("Monete: "+this.getMonete, width - 100, 20);
     }
 
+    public boolean isTorreRispettanteParametriPosizione(float xTorre, float yTorre){
+        int distanzaMinimaTraTorri = 30;
+        //controllo se la torre è sul sentiero
+        if ((xTorre >= 0 && xTorre <= 200 && yTorre >= height / 2 - 20 && yTorre <= height / 2 + 20) || 
+            (xTorre >= 180 && xTorre <= 220 && yTorre >= height / 2 - 100 && yTorre <= height / 2 + 20) || 
+            (xTorre >= 180 && xTorre <= 380 && yTorre >= height / 2 - 100 && yTorre <= height / 2 - 60) || 
+            (xTorre >= 380 && xTorre <= 420 && yTorre >= height / 2 - 100 && yTorre <= height / 2 + 20) || 
+            (xTorre >= 380 && xTorre <= width && yTorre >= height / 2 - 20 && yTorre <= height / 2 + 20)) { 
+            return false; //in caso la torre sia sul sentiero ritorna false ovvero che è falso che la torre rispetta il parametro
+        }
+
+        for (Torre torre : this.torri) {
+            if (dist(xTorre, yTorre, torre.getX(), torre.getY()) < distanzaMinimaTraTorri) {
+                return false; // in caso la torre sia più vicina di 30 ad un altra torre allora il parametro non è rispettato
+            }
+        }
+
+        return true; //se i due parametri di prima sono rispettati allora la torre può essere posizionata
+    }
+
+    //metodo per posizionare la torre tramite mouse
     public void posizionaTorreConMouse(){
         float xCliccato = mouseX;
         float yCliccato = mouseY;
@@ -86,7 +107,8 @@ class GestioneTowerDefense {
         float tempoRicaricaSparoTorre = 0;
         float potenzaColpoTorre = 0;
 
-        if (key == '1' && this.getMonete() >= costoTorreRossa) {
+        if (this.isTorreRispettanteParametriPosizione()) {
+            if (key == '1' && this.getMonete() >= costoTorreRossa) {
 
             raggioAzioneSparoTorre = 100;
             tempoRicaricaSparoTorre = 1;
@@ -97,27 +119,29 @@ class GestioneTowerDefense {
 
             this.monete -= costoTorreRossa;
 
-        }else if (key == '2' && this.getMonete() >= costoTorreVerde) {
+            }else if (key == '2' && this.getMonete() >= costoTorreVerde) {
 
-            raggioAzioneSparoTorre = 120;
-            tempoRicaricaSparoTorre = 1.5;
-            potenzaColpoTorre = 1.5;
+                raggioAzioneSparoTorre = 120;
+                tempoRicaricaSparoTorre = 1.5;
+                potenzaColpoTorre = 1.5;
 
-            Torre torreVerde = new TorreVerde(xCliccato, yCliccato, raggioAzioneSparoTorre, tempoRicaricaSparoTorre, potenzaColpoTorre);
-            this.torri.add(torreVerde);
+                Torre torreVerde = new TorreVerde(xCliccato, yCliccato, raggioAzioneSparoTorre, tempoRicaricaSparoTorre, potenzaColpoTorre);
+                this.torri.add(torreVerde);
 
-            this.monete -= costoTorreVerde;
+                this.monete -= costoTorreVerde;
 
-        }else if (key == '3' && this.getMonete() >= costoTorreBlu) {
-            raggioAzioneSparoTorre = 60;
-            tempoRicaricaSparoTorre = 1.5;
-            potenzaColpoTorre = 2;
+            }else if (key == '3' && this.getMonete() >= costoTorreBlu) {
+                raggioAzioneSparoTorre = 60;
+                tempoRicaricaSparoTorre = 1.5;
+                potenzaColpoTorre = 2;
 
-            Torre torreBlu = new torreBlu(xCliccato, yCliccato, raggioAzioneSparoTorre, tempoRicaricaSparoTorre, potenzaColpoTorre);
-            this.torri.add(torreBlu);
+                Torre torreBlu = new torreBlu(xCliccato, yCliccato, raggioAzioneSparoTorre, tempoRicaricaSparoTorre, potenzaColpoTorre);
+                this.torri.add(torreBlu);
 
-            this.monete -= costoTorreBlu;
+                this.monete -= costoTorreBlu;
+            }
         }
+        
     }
     
 
