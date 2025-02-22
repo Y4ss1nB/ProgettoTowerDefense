@@ -1,8 +1,8 @@
 class TorreRossa extends Torre{
 
     //costruttore
-    public TorreRossa(float x, float y, int raggioAzioneSparo, float tempoRicaricaSparo, float tempoAttesaPerSparare, float potenzaColpo){
-        super(x, y, raggioAzioneSparo, tempoRicaricaSparo, tempoAttesaPerSparare, potenzaColpo);
+    public TorreRossa(float x, float y, int raggioAzioneSparo, float tempoRicaricaSparo, float potenzaColpo){
+        super(x, y, raggioAzioneSparo, tempoRicaricaSparo, potenzaColpo);
     }
     
     public void display(){

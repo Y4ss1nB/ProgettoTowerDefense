@@ -73,6 +73,52 @@ class GestioneTowerDefense {
         text("Vite: "+this.getVite(), 10, 40);
         text("Monete: "+this.getMonete, width - 100, 20);
     }
+
+    public void posizionaTorreConMouse(){
+        float xCliccato = mouseX;
+        float yCliccato = mouseY;
+
+        int costoTorreRossa = 20;
+        int costoTorreVerde = 60;
+        int costoTorreBlu = 100;
+
+        int raggioAzioneSparoTorre = 0;
+        float tempoRicaricaSparoTorre = 0;
+        float potenzaColpoTorre = 0;
+
+        if (key == '1' && this.getMonete() >= costoTorreRossa) {
+
+            raggioAzioneSparoTorre = 100;
+            tempoRicaricaSparoTorre = 1;
+            potenzaColpoTorre = 1;
+
+            Torre torreRossa = new TorreRossa(xCliccato, yCliccato, raggioAzioneSparoTorre, tempoRicaricaSparoTorre, potenzaColpoTorre);
+            this.torri.add(torreRossa);
+
+            this.monete -= costoTorreRossa;
+
+        }else if (key == '2' && this.getMonete() >= costoTorreVerde) {
+
+            raggioAzioneSparoTorre = 120;
+            tempoRicaricaSparoTorre = 1.5;
+            potenzaColpoTorre = 1.5;
+
+            Torre torreVerde = new TorreVerde(xCliccato, yCliccato, raggioAzioneSparoTorre, tempoRicaricaSparoTorre, potenzaColpoTorre);
+            this.torri.add(torreVerde);
+
+            this.monete -= costoTorreVerde;
+
+        }else if (key == '3' && this.getMonete() >= costoTorreBlu) {
+            raggioAzioneSparoTorre = 60;
+            tempoRicaricaSparoTorre = 1.5;
+            potenzaColpoTorre = 2;
+
+            Torre torreBlu = new torreBlu(xCliccato, yCliccato, raggioAzioneSparoTorre, tempoRicaricaSparoTorre, potenzaColpoTorre);
+            this.torri.add(torreBlu);
+
+            this.monete -= costoTorreBlu;
+        }
+    }
     
 
 }

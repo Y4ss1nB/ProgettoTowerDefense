@@ -10,12 +10,12 @@ abstract class Torre {
   protected float tempoAttesaPerSparare;
   protected float potenzaColpo;
     
-  public Torre(float x, float y, int raggioAzioneSparo, float tempoRicaricaSparo, float tempoAttesaPerSparare, float potenzaColpo) {
+  public Torre(float x, float y, int raggioAzioneSparo, float tempoRicaricaSparo, float potenzaColpo) {
     this.x = x;
     this.y = y;
     this.raggioAzioneSparo = raggioAzioneSparo;
     this.tempoRicaricaSparo = tempoRicaricaSparo;
-    this.tempoAttesaPerSparare = tempoAttesaPerSparare;
+    this.tempoAttesaPerSparare = 0;
     this.potenzaColpo = potenzaColpo;
   }
 
