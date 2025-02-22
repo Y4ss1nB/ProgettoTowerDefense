@@ -1,7 +1,7 @@
 class NemicoArancione extends Nemico{
 
-    public NemicoArancione(float x, float y, float velocita, float vita){
-        super(x, y, velocita, vita);
+    public NemicoArancione(float x, float y, float velocita, float vita, int valoreNemico){
+        super(x, y, velocita, vita, valoreNemico);
     }
 
     void display(){

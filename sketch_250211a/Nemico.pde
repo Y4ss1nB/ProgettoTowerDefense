@@ -8,7 +8,7 @@ abstract class Nemico {
     protected int posizioneNemicoNelPercorso;
 
     //costruttore
-    public Nemico(float x, float y, float velocita, float vita, valoreNemico){
+    public Nemico(float x, float y, float velocita, float vita, int valoreNemico){
         this.x = x;
         this.y = y;
         this.velocita = velocita;

@@ -143,6 +143,45 @@ class GestioneTowerDefense {
         }
         
     }
+
+    public void creaOndata(){
+        int numeroNemici = Ondata*3 //ad ogni ondata ci sranno un numero di nemici equivalente al triplo del numero dell'ondata
+        int tipoNemico = rand.nextInt(3);
+
+        float vita = 0;;
+        float velocita = 0;
+        float valoreNemico = 0;
+        int xNemico = 0;
+
+        for (int i = 0; i < numeroNemici; ++i) {
+            xNemico = -i*40; //distanza 40 pixel tra una torre e l'altra alla partenza
+            if (tipoNemico == 0) {
+
+                velocita = 2;
+                vita = 3;
+                valoreNemico = 15;
+
+                NemicoArancione nemicoArancione = new NemicoArancione(xNemico, height/2, velocita, vita, valoreNemico);
+                this.nemici.add(nemicoArancione);
+
+            }else if (tipoNemico == 1) {
+                velocita = 1.5;
+                vita = 4;
+                valoreNemico = 30;
+
+                NemicoViola nemicoViola = new NemicoViola(xNemico, height/2, velocita, vita, valoreNemico);
+                this.nemici.add(nemicoViola);
+
+            }else if (tipoNemico == 2) {
+                velocita = 1;
+                vita = 6;
+                valoreNemico = 50;
+
+                NemicoNero nemicoNero = new NemicoNero(xNemico, height/2, velocita, vita, valoreNemico);
+                this.nemici.add(nemicoNero);
+            }
+        }
+    }
     
 
 }

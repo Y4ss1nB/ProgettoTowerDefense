@@ -1,7 +1,7 @@
 class NemicoNero extends Nemico{
 
-    public NemicoNero(float x, float y, float velocita, float vita){
-        super(x, y, velocita, vita);
+    public NemicoNero(float x, float y, float velocita, float vita, int valoreNemico){
+        super(x, y, velocita, vita, valoreNemico);
     }
 
     void display() {
