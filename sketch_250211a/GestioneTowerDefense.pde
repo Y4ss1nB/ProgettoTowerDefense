@@ -74,6 +74,31 @@ class GestioneTowerDefense {
         text("Monete: "+this.getMonete, width - 100, 20);
     }
 
+    public void proseguimentoGioco(){
+        if (this.nemici.isEmpty()) {
+            ondata++;
+            this.creaOndata();
+        }
+
+        for (Torre torre : this.torri) {
+            torre.AttacaNemicoNellArea(this.nemici);
+        }
+
+        for (int i = this.nemici.size()-1; i >= 0; i--) {
+            Nemico nemico = nemici.get(i);
+            nemico.muoviNemico();
+
+            if (nemico.isNemicoMorto()) {
+                this.monete += nemico.getValoreNemico();
+                nemici.remove(i);
+
+            }else if (nemico.hasNemicoRaggiuntoFine()) {
+                nemici.remove(i);
+                vite -= 1;
+            }
+        }
+    }
+
     public boolean isTorreRispettanteParametriPosizione(float xTorre, float yTorre){
         int distanzaMinimaTraTorri = 30;
         //controllo se la torre è sul sentiero
