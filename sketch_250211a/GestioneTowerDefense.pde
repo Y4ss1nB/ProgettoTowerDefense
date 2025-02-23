@@ -70,9 +70,13 @@ class GestioneLogicaTowerDefense {
 
         fill(255);
         textSize(16);
-        text("Ondata: "+this.getNumeroOndata(), 10, 20);
-        text("Vite: "+this.getVite(), 10, 40);
+        text("Ondata: "+this.getNumeroOndata(), 30, 20);
+        text("Vite: "+this.getVite(), 20, 40);
         text("Monete: "+this.getMonete(), width - 100, 20);
+        
+        textSize(14);
+        textAlign(CENTER);
+        text("Torre Rossa: premere 1, costo: 25     Torre Verde: premere 2, costo: 60     Torre Blu: premere 3, costo: 100", width / 2, height-30);
     }
 
     public void proseguimentoGioco(){
@@ -129,7 +133,7 @@ class GestioneLogicaTowerDefense {
         float xCliccato = mouseX;
         float yCliccato = mouseY;
 
-        int costoTorreRossa = 20;
+        int costoTorreRossa = 25;
         int costoTorreVerde = 60;
         int costoTorreBlu = 100;
 
