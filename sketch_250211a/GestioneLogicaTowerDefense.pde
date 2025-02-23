@@ -3,11 +3,11 @@ import java.util.Random;
 
 class GestioneLogicaTowerDefense {  
     //attributi
-    ArrayList<Torre> torri;
-    ArrayList<Nemico> nemici;
-    int numeroOndata;
-    int vite;
-    int monete;
+    private ArrayList<Torre> torri;
+    private ArrayList<Nemico> nemici;
+    private int numeroOndata;
+    private int vite;
+    private int monete;
     Random rand;
 
     //costruttore
@@ -144,14 +144,14 @@ class GestioneLogicaTowerDefense {
         if (isTorreRispettanteParametriPosizione(xCliccato, yCliccato)) {
             if (key == '1' && this.getMonete() >= costoTorreRossa) {
 
-            raggioAzioneSparoTorre = 100;
-            tempoRicaricaSparoTorre = 1;
-            potenzaColpoTorre = 1;
-
-            Torre torreRossa = new TorreRossa(xCliccato, yCliccato, raggioAzioneSparoTorre, tempoRicaricaSparoTorre, potenzaColpoTorre);
-            this.torri.add(torreRossa);
-
-            this.monete -= costoTorreRossa;
+              raggioAzioneSparoTorre = 100;
+              tempoRicaricaSparoTorre = 1;
+              potenzaColpoTorre = 1;
+  
+              Torre torreRossa = new TorreRossa(xCliccato, yCliccato, raggioAzioneSparoTorre, tempoRicaricaSparoTorre, potenzaColpoTorre);
+              this.torri.add(torreRossa);
+  
+              this.monete -= costoTorreRossa;
 
             }else if (key == '2' && this.getMonete() >= costoTorreVerde) {
 
@@ -179,7 +179,7 @@ class GestioneLogicaTowerDefense {
     }
 
     public void creaOndata(){
-        int numeroNemici = numeroOndata*3; //ad ogni ondata ci sranno un numero di nemici equivalente al triplo del numero dell'ondata
+        int numeroNemici = numeroOndata*3; //ad ogni ondata ci saranno un numero di nemici equivalente al triplo del numero dell'ondata
         int tipoNemico = rand.nextInt(3);
 
         float vita = 0;;
