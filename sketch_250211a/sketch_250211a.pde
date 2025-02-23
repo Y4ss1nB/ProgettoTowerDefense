@@ -10,3 +10,7 @@ void draw(){
   gestioneLogicaTowerDefense.display();
   gestioneLogicaTowerDefense.proseguimentoGioco();
 }
+
+void mousePressed(){
+  gestioneLogicaTowerDefense.posizionaTorreConMouse();
+}
