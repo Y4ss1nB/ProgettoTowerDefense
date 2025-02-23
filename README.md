@@ -15,6 +15,7 @@ Il progetto deve permettere ad un utente di poter giocare ad un gioco che sia co
     - il secondo tipo di nemico è il nemico di colore viola e avrà una vita maggiore ma sarà abbastanza lento.
     - il terzo tipo di nemico è il nemico di colore nero e sarà il nemico con più salute ma sarà anche quello più lento.
 - Il tipo di nemico presente nell'ondata sarà totalmente randomico.
+- Il numero di nemici nell'ondata sara uguale al triplo del numero di ondata.
 - Nella parte bassa dello schermo viene scritto che tasto schiacciare per selezionare una determinata torre e il suo costo.
 - L’utente avrà tre vite.
 - Se l'utente permette a più di tre nemici di arrivare alla fine del sentiero avrà perso e lì verrà stampata la scritta “game over” di colore giallo.
