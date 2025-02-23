@@ -97,6 +97,10 @@ class GestioneLogicaTowerDefense {
                 vite -= 1;
             }
         }
+
+        if (this.getVite() <= 0) {
+            this.gameOver();
+        }
     }
 
     public boolean isTorreRispettanteParametriPosizione(float xTorre, float yTorre){
@@ -208,5 +212,8 @@ class GestioneLogicaTowerDefense {
         }
     }
     
+    public void gameOver(){
+        noLoop();
+    }
 
 }
