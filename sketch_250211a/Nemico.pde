@@ -13,7 +13,7 @@ abstract class Nemico {
         this.y = y;
         this.velocita = velocita;
         this.vita = vita;
-        this.valoreNemico = valoreNemico
+        this.valoreNemico = valoreNemico;
         this.posizioneNemicoNelPercorso = 0;
     }
 

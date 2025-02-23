@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-class GestioneTowerDefense {  
+class GestioneLogicaTowerDefense {  
     //attributi
     ArrayList<Torre> torri;
     ArrayList<Nemico> nemici;
@@ -11,7 +11,7 @@ class GestioneTowerDefense {
     Random rand;
 
     //costruttore
-    public GestioneTowerDefense(){
+    public GestioneLogicaTowerDefense(){
         this.torri = new ArrayList<Torre>();
         this.nemici = new ArrayList<Nemico>();
         this.numeroOndata = 0;
@@ -71,12 +71,12 @@ class GestioneTowerDefense {
         textSize(14);
         text("Ondata: "+this.getNumeroOndata(), 10, 20);
         text("Vite: "+this.getVite(), 10, 40);
-        text("Monete: "+this.getMonete, width - 100, 20);
+        text("Monete: "+this.getMonete(), width - 100, 20);
     }
 
     public void proseguimentoGioco(){
         if (this.nemici.isEmpty()) {
-            ondata++;
+            numeroOndata++;
             this.creaOndata();
         }
 
@@ -132,7 +132,7 @@ class GestioneTowerDefense {
         float tempoRicaricaSparoTorre = 0;
         float potenzaColpoTorre = 0;
 
-        if (this.isTorreRispettanteParametriPosizione()) {
+        if (isTorreRispettanteParametriPosizione(xCliccato, yCliccato)) {
             if (key == '1' && this.getMonete() >= costoTorreRossa) {
 
             raggioAzioneSparoTorre = 100;
@@ -160,7 +160,7 @@ class GestioneTowerDefense {
                 tempoRicaricaSparoTorre = 1.5;
                 potenzaColpoTorre = 2;
 
-                Torre torreBlu = new torreBlu(xCliccato, yCliccato, raggioAzioneSparoTorre, tempoRicaricaSparoTorre, potenzaColpoTorre);
+                Torre torreBlu = new TorreBlu(xCliccato, yCliccato, raggioAzioneSparoTorre, tempoRicaricaSparoTorre, potenzaColpoTorre);
                 this.torri.add(torreBlu);
 
                 this.monete -= costoTorreBlu;
@@ -170,12 +170,12 @@ class GestioneTowerDefense {
     }
 
     public void creaOndata(){
-        int numeroNemici = Ondata*3 //ad ogni ondata ci sranno un numero di nemici equivalente al triplo del numero dell'ondata
+        int numeroNemici = numeroOndata*3; //ad ogni ondata ci sranno un numero di nemici equivalente al triplo del numero dell'ondata
         int tipoNemico = rand.nextInt(3);
 
         float vita = 0;;
         float velocita = 0;
-        float valoreNemico = 0;
+        int valoreNemico = 0;
         int xNemico = 0;
 
         for (int i = 0; i < numeroNemici; ++i) {
