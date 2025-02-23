@@ -16,7 +16,7 @@ class GestioneLogicaTowerDefense {
         this.nemici = new ArrayList<Nemico>();
         this.numeroOndata = 0;
         this.vite = 3;
-        this.monete = 220;
+        this.monete = 180;
         this.rand = new Random();
     }
 
@@ -52,7 +52,8 @@ class GestioneLogicaTowerDefense {
     public void display(){
         background(0, 128, 0);
 
-        fill(150, 100, 150);
+        fill(150, 100, 50);
+        noStroke();
         rect(0, height/2 - 20, 200, 40);
         rect(180, height/2 - 100, 40, 120);
         rect(180, height/2 - 100, 200, 40);
@@ -67,8 +68,8 @@ class GestioneLogicaTowerDefense {
             nemico.display();
         }
 
-        fill(0, 0, 255);
-        textSize(14);
+        fill(255);
+        textSize(16);
         text("Ondata: "+this.getNumeroOndata(), 10, 20);
         text("Vite: "+this.getVite(), 10, 40);
         text("Monete: "+this.getMonete(), width - 100, 20);
@@ -93,14 +94,14 @@ class GestioneLogicaTowerDefense {
                 nemici.remove(i);
 
             }else if (nemico.hasNemicoRaggiuntoFine()) {
-                nemici.remove(i);
-                vite -= 1;
+               nemici.remove(i);
+               vite -= 1;
             }
         }
-
-        if (this.getVite() <= 0) {
+        if (vite <= 0) {
             this.gameOver();
         }
+       
     }
 
     public boolean isTorreRispettanteParametriPosizione(float xTorre, float yTorre){

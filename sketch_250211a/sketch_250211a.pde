@@ -7,8 +7,9 @@ void setup(){
 
 void draw(){
  background(0, 51, 0);
-  gestioneLogicaTowerDefense.display();
+  
   gestioneLogicaTowerDefense.proseguimentoGioco();
+  gestioneLogicaTowerDefense.display();
 }
 
 void mousePressed(){
