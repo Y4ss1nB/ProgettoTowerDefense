@@ -192,7 +192,7 @@ class GestioneLogicaTowerDefense {
             if (tipoNemico == 0) {
 
                 velocita = 2;
-                vita = 3;
+                vita = 4;
                 valoreNemico = 15;
 
                 NemicoArancione nemicoArancione = new NemicoArancione(xNemico, height/2, velocita, vita, valoreNemico);
@@ -200,7 +200,7 @@ class GestioneLogicaTowerDefense {
 
             }else if (tipoNemico == 1) {
                 velocita = 1.5;
-                vita = 4;
+                vita = 5;
                 valoreNemico = 30;
 
                 NemicoViola nemicoViola = new NemicoViola(xNemico, height/2, velocita, vita, valoreNemico);
